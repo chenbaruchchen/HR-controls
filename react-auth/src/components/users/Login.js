@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
  import Singin from './Signin'
  import {setUserInLocal} from '../scripts/setUser'
 async function loginUser(credentials) {
-    return fetch('http://localhost:3300/api/users/login', {
+    return fetch('/api/users/login', {
    method: 'POST',
    headers: {
      'Content-Type': 'application/json'
