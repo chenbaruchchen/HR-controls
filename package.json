@@ -4,15 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start1": "nodemon server.js",
-
-    "build": "cd react-auth && npm run build",
-    "install-client": "cd react-auth && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "server": "node server.js",
-    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix react-auth\"",
-    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run start --prefix react-auth\""
-  },
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+},
+"engines": {
+    "node": "14.16.0"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
