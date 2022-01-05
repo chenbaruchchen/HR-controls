@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
    import './users.css'
 async function registerUser(credentials) {
-    return fetch('http://localhost:3300/api/users/register', {
+    return fetch('api/users/register', {
    method: 'POST',
    headers: {
      'Content-Type': 'application/json'

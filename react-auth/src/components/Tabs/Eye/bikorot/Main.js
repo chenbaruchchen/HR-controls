@@ -21,7 +21,7 @@ const ChoseShelon = () => {
  useEffect(()=>{
 
   function getShelonim(){
-    axios.get('http://localhost:3300/api/secret/getRooms', {
+    axios.get('/api/secret/getRooms', {
       headers: {
         'Authorization': `token ${token}`
       }

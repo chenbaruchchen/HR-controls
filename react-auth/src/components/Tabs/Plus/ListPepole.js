@@ -51,7 +51,7 @@ let token=useToken().token
   
 
   function getUsers(){
-    axios.get('http://localhost:3300/api/secret/getUsers', {
+    axios.get('/api/secret/getUsers', {
       headers: {
         'Authorization': `token ${token}`
       }

@@ -70,7 +70,7 @@ let data={
 }
 console.log(data)
 
-  axios.post('http://localhost:3300/api/secret/updateQ',data,  {
+  axios.post('/api/secret/updateQ',data,  {
     headers: {
         'Authorization': `token ${token}`,
       'content-Type': 'application/json',

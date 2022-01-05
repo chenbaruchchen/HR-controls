@@ -18,7 +18,7 @@ export default function App(props) {
   function getFiles(){
 let data={roomId:props.room._id,help:'help'}
 console.log(data)
-axios.get('http://localhost:3300/api/secret/getFilesByRoomId',
+axios.get('/api/secret/getFilesByRoomId',
 {
   params: {
     roomId: props.room._id
