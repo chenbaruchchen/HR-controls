@@ -102,7 +102,7 @@ console.log(chosen)
 
 function addRoom(){
 console.log(chosen)
-  axios.post('http://localhost:3300/api/secret/createRoom', {chosen,text}, {
+  axios.post('/api/secret/createRoom', {chosen,text}, {
     headers: {
       'Authorization': `token ${token}`
     }

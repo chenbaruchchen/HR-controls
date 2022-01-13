@@ -5,6 +5,8 @@ import useToken from '../../../useToken'
 
 import Shelon from './Shelon'
 import Files from './Files'
+
+import ToolBar from "./tool-bar/ToolBar";
 import { useEffect,useState } from 'react'
 
 
@@ -39,7 +41,9 @@ axios.get('/api/secret/getFilesByRoomId',
 
     return(
         <>
+          <ToolBar files={files}/>
           <Files setChosen={setChosen} files={files}/>
+        
          <Shelon chosen={chosen}/>
       
         </>
