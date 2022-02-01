@@ -5,6 +5,26 @@ const bcrypt = require("bcryptjs");
 const jwt = require('jsonwebtoken')
 
 module.exports = {
+  refreshToken:(req,res) => {
+
+     
+    let user=req.body
+            ////here client send user with id=_id of mongoos
+      const token = jwt.sign({ id: user.id,email: user.email }, process.env.token, {
+        expiresIn: "10H",
+      });
+
+      return res.send(token)
+      // return res.status(200).json({
+      //   user:{
+      //     email:user.email,
+      //     username:user.username,
+      //     id:user._id
+      //   },
+      //    token
+      // });
+    
+  },
   login: (req, res) => {
     console.log("login");
     console.log(req.body);
@@ -17,8 +37,8 @@ module.exports = {
         if (!user) {
 
             /////send!!! נגמר שירות
-          res.send("משתמש לא קיים");
-          return res.redirect("/login");
+          res.status(404);
+          return  
         }
 
         // Load hash from your password DB.
@@ -38,8 +58,11 @@ module.exports = {
             });
 
             return res.status(200).json({
-              email:req.body.email,
-              massege: "auth gooddddd",
+              user:{
+                email:user.email,
+                username:user.username,
+                id:user._id
+              },
                token
             });
           } else {

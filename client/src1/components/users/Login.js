@@ -3,21 +3,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
  import Singin from './Signin'
  import {setUserInLocal} from '../scripts/setUser'
-
-function setExpiredInLocalStorage() {
-  const now = Date.now() 
-
-  ////expired in 3*60*1000
-  const expired= now+ 3*600*1000
-
-  ///set in local 
-
-  window.localStorage.setItem('expired',  expired);
-
-  // setTimeout(refreshToken, 3*600*1000)
-}
-
-
 async function loginUser(credentials) {
     return fetch('/api/users/login', {
    method: 'POST',
@@ -44,15 +29,7 @@ export default function Login({ setToken }) {
         email,
       password
     });
-
-    if(token){
-      setToken(token)
-      setExpiredInLocalStorage()
-    }
-    else{
-      alert('problem with token')
-    }
-  
+    setToken(token)
    
     
   }
