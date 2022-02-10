@@ -15,7 +15,7 @@ export default function ListRooms(props) {
     useEffect(()=>{
   
    function getRoomsByUser(){
-    axios.get('http://localhost:3300/api/secret/getRoomsByUser', {
+    axios.get('/api/secret/getRoomsByUser', {
       headers: {
         'Authorization': `token ${token}`
       }
@@ -24,7 +24,7 @@ export default function ListRooms(props) {
        
       // pepolesList=res.data
       setRooms(res.data)
-      
+       
     })
     .catch((error) => {
       console.error(error)
