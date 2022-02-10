@@ -2,7 +2,7 @@ const  express = require("express");
 const chackAuth = require("../middlewares/chackAuth");
 
 const  {getUsers} = require("../controllers/secret/users");
-const  {createRoom,getRoomsByUser,addFileToRoom,getRooms,getFilesByRoomId,updateQ} = require("../controllers/secret/room");
+const  {createRoom,getRoomsByUser,addFileToRoom,getRooms,getFilesByRoomId,updateQ,getLastTenMessages} = require("../controllers/secret/room");
 
 const router = express.Router();
 
@@ -26,6 +26,13 @@ router.get("/getFilesByRoomId" ,getFilesByRoomId)
 
 router.post("/updateQ", chackAuth,updateQ)
 
+
+// router.get("/getLastTenMessages", chackAuth, getLastTenMessages)
+ 
+router.post("/getLastTenMessages", chackAuth, getLastTenMessages);
+
+
+ 
     module.exports=router
 
    

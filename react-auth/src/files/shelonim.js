@@ -1,4 +1,43 @@
-let shelonim=[{name:'sadir-rate',list:['a','b']},{name:'mil-rate',list:['a','b']},
+let shelonim=[
+    
+    {
+        name:'sadir-rate',
+    list:[
+        {
+        "quatsion": "נושא 1",
+        precent:50,
+        index:0
+        
+    },
+     {
+        "quatsion": "נושא 2",
+        precent:50,
+        index:1
+        
+    }
+        
+    
+      ]
+    
+    }
+    ,{name:'mil-rate', 
+    list:[
+        {
+        "quatsion": "נושא 1",
+        precent:50,
+        index:0
+        
+    },
+     {
+        "quatsion": "נושא 2",
+        precent:50,
+        index:1
+        
+    }
+        
+    
+      ]
+      },
 {name:'sadir',list:[
     {
         "quatsion": "מבקרים",

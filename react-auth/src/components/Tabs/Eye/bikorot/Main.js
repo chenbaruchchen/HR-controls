@@ -28,7 +28,7 @@ const ChoseShelon = () => {
     })
     .then((res) => {
     
-     
+      
       setRooms(res.data)
     })
     .catch((error) => {

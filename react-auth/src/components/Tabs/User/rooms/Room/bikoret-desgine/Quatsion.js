@@ -12,12 +12,15 @@ export default function Quatsion(props){
     
     const [found,setFound]=useState('')
 
+    // useEffect(()=>{
+    //   props.setAns([])
+    // },[])
     function changeInput(tag,input) {
-     
+      
         if (tag==='details') {
             console.log('details')
             props.setAns((prev)=>{
-              
+              console.log(prev)
                setDetails(input)
               prev[props.quatsion.index]={details:input,found:found}
                 console.log(prev)

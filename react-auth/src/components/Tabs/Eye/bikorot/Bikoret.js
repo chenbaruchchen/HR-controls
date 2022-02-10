@@ -41,7 +41,7 @@ axios.get('/api/secret/getFilesByRoomId',
 
     return(
         <>
-          <ToolBar files={files}/>
+          <ToolBar   files={files}/>
           <Files setChosen={setChosen} files={files}/>
         
          <Shelon chosen={chosen}/>

@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
-import Login from './users/Login'
+// import Login from './users/Login'
+import Login from './users/login/Login'
 import axios from 'axios'
 
 import {User} from 'react-feather'
@@ -26,8 +27,8 @@ const [opeLogin, setOpenLogin]=useState(false)
 // });
 
    if (opeLogin) {
-    return<><a onClick={()=>setOpenLogin(false)}>אורחים</a>
-    <Login setToken ={ setToken } /></>
+    return<div className='App' style={{width:'90vw'}}><a onClick={()=>setOpenLogin(false)}>אורחים</a>
+    <Login setToken ={ setToken } /></div>
  }
   
  else{

@@ -46,15 +46,13 @@ function Qlist(props) {
     let token=useToken().token
 
 function addFile(data){
-    console.log(token)
-    axios.post('http://localhost:3300/api/secret/addFileToRoom', {
+     axios.post('http://localhost:3300/api/secret/addFileToRoom', {
       headers: {
         'Authorization': `token ${token}`
       },data
     })
     .then((res) => {
       
-      console.log(res)
     })
     .catch((error) => {
       console.error(error)

@@ -16,12 +16,12 @@ export default function meta(val) {
     
             case 'sadir-rate':
                 meta={
-                    name:'sadir-rate',type:'int'
+                    name:'sadir-rate',type:'string'
                 }
                 break;
                 case 'mil-rate':
                     meta={
-                        name:'mil-rate',type:'int'
+                        name:'mil-rate',type:'string'
                     }
                     break;
         default:

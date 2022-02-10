@@ -8,7 +8,8 @@ import Login from './components/users/Login';
 import Gust from './components/Gust'
 import Tabs from './components/Tabs'
 import UserTab from './components/Tabs/User/User'
-
+import TabBar from './components/ui-element/tab-bar/tab-bar'
+ 
 function App() {
 const [tab,setTab]=useState(UserTab)
   const { token, setToken } = useToken();
@@ -42,8 +43,6 @@ const [tab,setTab]=useState(UserTab)
      localStorage = JSON.parse(localStorage);
     localStorage.token=response.data
   
-
-
     window.localStorage.setItem('token', JSON.stringify(localStorage));
 
 console.log(window.localStorage.getItem('token'))
@@ -80,12 +79,13 @@ if (expired>=Date.now()) {
    
 
   return (
-    <div className="wrapper">
-        <Tabs setTab={setTab} />
-     
+    <div className="App">
+        {/* <Tabs setTab={setTab} />
+     */}
       {tab}
      
- 
+     <br/>
+ <TabBar setTab={setTab} />
     </div>
   );
 }

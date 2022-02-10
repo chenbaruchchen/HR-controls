@@ -1,4 +1,5 @@
-import Chat from '../../../../chat/Chat2'
+// import Chat from '../../../../chat/Chat2'
+import Chat from '../../../../chat/Chat'
 // import Bikoret from './bikoret/Bikoret'
 import Bikoret from './bikoret-desgine/Bikoret'
 
@@ -9,8 +10,7 @@ export default function Room(props) {
   const [openBikoret,setOpenBikoret]=useState(true)
  return (
       <div>
-          {console.log(props.chosen)}
-          {props.chosen}
+           {props.chosen}
 
 <Tabs setOpenBikoret={setOpenBikoret} />
   {openBikoret? <Bikoret roomId={props.chosen}/>  : <Chat roomId={props.chosen}/>}

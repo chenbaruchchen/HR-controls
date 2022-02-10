@@ -7,7 +7,9 @@ export default function Send(props){
     let token=useToken().token
 
     function send( ){
+      // console.log('props.ans')
          console.log(props.ans)
+      //    console.log('props.ans')
         let data={
             roomId:props.roomId,
             meta:meta(props.meta),

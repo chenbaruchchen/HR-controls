@@ -1,7 +1,8 @@
+import { saveAs } from "file-saver";
 const ExcelJS = require('exceljs');
 
 export default function excel(files) {
-
+console.log(files)
     const workbook = new ExcelJS.Workbook();
 
 let indexSheet=0
@@ -14,14 +15,26 @@ let indexSheet=0
 
         
       file.ans.forEach(ans => {
-        // sheet.addRow(["quatsion", ans?ans.details:"null", ans?ans.found:'null']);
+        sheet.addRow(["quatsion", ans?ans.details:"null", ans?ans.found:'null']);
  
-        sheet.addRow(["quatsion"]);
+        // sheet.addRow(["quatsion"]);
       });
-      console.log(sheet)
+       
     });
-  save("name",workbook)
 
+    saveFile("ביקורת", workbook);
+
+
+  async function saveFile(fileName, workbook) {
+    const xls64 = await workbook.xlsx.writeBuffer({ base64: true });
+    saveAs(
+      new Blob([xls64], {
+        type:
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      }),
+      fileName
+    );
+  }
   
 }
 
@@ -42,3 +55,40 @@ function save(filename, data) {
         document.body.removeChild(elem);
     }
 }
+
+
+
+// import Excel from "exceljs";
+// import { saveAs } from "file-saver";
+
+// export default function App() {
+//   return <button onClick={file}>click</button>;
+// }
+// function file() {
+//   const workbook = new Excel.Workbook();
+
+//   const worksheet = workbook.addWorksheet("People");
+//   worksheet.columns = [
+//     { header: "Id", key: "id", width: 10 },
+//     { header: "Name", key: "name", width: 10 },
+//     { header: "D.O.B.", key: "DOB", width: 30 }
+//   ];
+//   worksheet.addRow([10086, "Ken1", "YYYY-MM-DD"]);
+//   worksheet.addRow([10087, "Ken2", "YYYY-MM-DD"]);
+//   worksheet.addRow([10088, "Ken3", "YYYY-MM-DD"]);
+
+
+    // saveFile("fileNameXXX", workbook);
+
+
+  // async function saveFile(fileName, workbook) {
+  //   const xls64 = await workbook.xlsx.writeBuffer({ base64: true });
+  //   saveAs(
+  //     new Blob([xls64], {
+  //       type:
+  //         "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+  //     }),
+  //     fileName
+  //   );
+  // }
+// }

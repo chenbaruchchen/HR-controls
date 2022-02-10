@@ -2,11 +2,24 @@ const mongoose = require("mongoose");
 
 const Room = require("../../models/Room");
 const File = require("../../models/File");
-
+const RoomChat = require("../../models/RoomChat");
 const {decode} = require('../../scripts/decodeToken')
 
 
 module.exports = {
+  getLastTenMessages: (req, res) => {
+    console.log('start')  
+    RoomChat.find( {roomId:req.body.roomId}, function (err, roomChat) {
+       
+      if (err) {
+        console.log(err)
+      };
+      if (! roomChat) return res.send([]);
+   
+   res.send(roomChat)
+  });
+
+  },
     createRoom: (req, res) => {
          // console.log(req.headers.authorization.split(' ')[1],decoded)
          console.log(req.headers)

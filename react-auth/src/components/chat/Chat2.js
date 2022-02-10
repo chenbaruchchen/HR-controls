@@ -3,14 +3,54 @@ import './chat.css'
 import { initiateSocket, disconnectSocket,
 subscribeToChat, sendMessage } from './Socket';
 
-import {getEmail} from '../scripts/setUser'
-const ChatFigma = (props) => {
+import useToken from '../useToken'
+ 
+import axios from "axios";
 
+import {getEmail} from '../scripts/setUser'
+ 
+function getUserFromLocal() {
+  let userAndToken =localStorage.getItem('token');
+    
+  const user = JSON.parse(userAndToken).user;
+ 
+  return user
+}
+////get older messages
+async function getLastTenMessages(setChat,roomId,token){
+ 
+ await axios.post('/api/secret/getLastTenMessages', {
+    roomId
+  }, {
+    headers: {
+      'Authorization': `Basic ${token}` 
+    }
+  }) .then((res) => {
+    // console.log(res)
+    // console.log(res.data[0].messages)
+   setChat(res.data[0].messages)
+  })
+
+  .catch((error) => {
+    console.error(error)
+  })
+
+ 
+
+}
+const ChatFigma = (props) => {
+ 
     const [room, setRoom] = useState(props.roomId);
     const [message, setMessage] = useState('');
     const [chat, setChat] = useState([]); 
-    const [user, setUser] = useState(getEmail()); 
+    const [user, setUser] = useState(getUserFromLocal()); 
+
+    let token=useToken().token
+
     useEffect(() => {
+
+        getLastTenMessages(setChat,room,token)
+
         if (room) initiateSocket(room); 
         subscribeToChat((err, data) => {
         if(err) return; 
@@ -20,7 +60,7 @@ const ChatFigma = (props) => {
         disconnectSocket();
         }
         }, [room]);
-        
+        console.log(chat)
    function chackIfMe(massege) {
     if (massege.user===user){
         return true
@@ -44,12 +84,13 @@ const ChatFigma = (props) => {
         <div  className="chat-list">
 
         { chat.map((m,i) => (
- 
+
  <div  key={i} className={chackIfMe(m) ? "chat-my-box" : "chat-other-box"}>
+   
  <div  className={chackIfMe(m)? "chat-my-msg": "chat-other-msg" }>
    <span className="chat-figma-text04">{m.message}</span>
- </div>
- <span className="chat-figma-text05">{m.user}</span>
+ </div>  
+ <span className="chat-figma-text05">{m.user?.username}</span>
 </div>
 
 
