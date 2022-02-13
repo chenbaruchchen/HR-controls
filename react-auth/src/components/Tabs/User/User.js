@@ -7,7 +7,7 @@ import  Rooms from './rooms/Rooms'
 export default function Dashboard() {
  
   return(
-  <div style={{margin:0,width:'90vw'}} className="App">
+  <div style={{margin:0,width:'97vw'}} className="App">
 <UserHeader/>
        
 

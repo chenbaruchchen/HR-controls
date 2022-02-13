@@ -85,6 +85,12 @@ console.error(error)
 })
 
 }
+
+function getPartOfText(text) {
+  let shortText= text.slice(0,50)
+   return shortText
+ }
+
 if(edit){
 return(
   <div  onClick={()=>setOpen( prev=>  !prev)}  className="chose-shelon-q-open" >
@@ -122,7 +128,7 @@ if (open) {
 } else {
   return(
   <div onClick={()=>setOpen( prev=>  !prev)} className="chose-shelon-q">
-  <h1>{props.quatsion.quatsion}</h1>
+  <h1>{getPartOfText(props.quatsion.quatsion)}</h1>
 </div>
   )
 }

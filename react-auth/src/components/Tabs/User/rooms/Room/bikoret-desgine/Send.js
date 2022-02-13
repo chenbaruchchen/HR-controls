@@ -12,7 +12,9 @@ export default function Send(props){
       //    console.log('props.ans')
         let data={
             roomId:props.roomId,
-            meta:meta(props.meta),
+            meta:meta(props.meta)?meta(props.meta):{
+              name:'לא נמצא השם',type:'string'
+           },
             ans:props.ans
         } 
         axios.post('http://localhost:3300/api/secret/addFileToRoom',data,  {
