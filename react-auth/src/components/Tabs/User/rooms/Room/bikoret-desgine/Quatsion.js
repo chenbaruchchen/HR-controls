@@ -9,10 +9,10 @@ export default function Quatsion(props){
     const [open,setOpen]=useState(false)
     const [check,setCheck]=useState(false)
     const [ans,setAns]=useState('')
-    const [details,setDetails]=useState(props.ans[props.quatsion.index]?.details)
+    const [details,setDetails]=useState(props.ans[props.quatsion?.index]?.details)
 
     
-    const [found,setFound]=useState(props.ans[props.quatsion.index]?.found)
+    const [found,setFound]=useState(props.ans[props.quatsion?.index]?.found)
 
     // useEffect(()=>{
     //   props.setAns([])

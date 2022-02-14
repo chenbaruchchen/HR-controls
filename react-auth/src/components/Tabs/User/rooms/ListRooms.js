@@ -64,7 +64,7 @@ if (rooms!==null) {
        
 
 
-      <div
+      <div className="App"
        onClick={()=>{
            
           props.setChosen(room._id)
@@ -77,7 +77,7 @@ if (rooms!==null) {
     ))
 }
 else {
-    listElement=<div>
+    listElement=<div className="App">
     
     <h4>לא מצאנו</h4>
     <button onClick={()=>getList()}>נסה למצוא שוב</button>

@@ -9,7 +9,7 @@ export default function Room(props) {
   
   const [openBikoret,setOpenBikoret]=useState(true)
  return (
-      <div>
+      <div style={{borderRadius:'30px'}} className="App">
            {props.chosen}
 
 <Tabs setOpenBikoret={setOpenBikoret} />
