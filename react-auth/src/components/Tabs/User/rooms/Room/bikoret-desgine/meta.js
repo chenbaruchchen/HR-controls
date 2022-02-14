@@ -29,6 +29,17 @@ export default function meta(val) {
                         name:'שאלון מפקד',type:'string'
                     }
                     break;
+
+                    case 'שאלון שגרת יחידה -מתקני רווחת הפרט':
+                    meta={
+                        name:'שאלון שגרת יחידה -מתקני רווחת הפרט',type:'string'
+                    }
+                    break;
+                    case 'רבנות':
+                        meta={
+                            name:'רבנות',type:'string'
+                        }
+                        break;
         default:
             break;
  if (meta===null){meta={
