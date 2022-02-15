@@ -19,7 +19,7 @@ export default function Send(props){
 
         localStorage.setItem('lastFile', JSON.stringify(data));
  
-        axios.post('http://localhost:3300/api/secret/addFileToRoom',data,  {
+        axios.post('/api/secret/addFileToRoom',data,  {
              headers: {
                  'Authorization': `token ${token}`,
                'content-Type': 'application/json',
