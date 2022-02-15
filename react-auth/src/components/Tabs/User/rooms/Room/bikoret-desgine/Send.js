@@ -7,9 +7,8 @@ export default function Send(props){
     let token=useToken().token
 
     function send( ){
-      // console.log('props.ans')
-         console.log(props.ans)
-      //    console.log('props.ans')
+      alert(`פונקציית שליחה `)
+     
         let data={
             roomId:props.roomId,
             meta:meta(props.meta)?meta(props.meta):{
@@ -17,6 +16,9 @@ export default function Send(props){
            },
             ans:props.ans
         } 
+
+        localStorage.setItem('lastFile', JSON.stringify(data));
+ 
         axios.post('http://localhost:3300/api/secret/addFileToRoom',data,  {
              headers: {
                  'Authorization': `token ${token}`,
