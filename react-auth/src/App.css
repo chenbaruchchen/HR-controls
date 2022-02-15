@@ -13,5 +13,6 @@ body{
     width:100%;
     height:100%;
     flex-direction:column;
-    color:#120303
+    color:#120303;
+    margin-bottom: 50px;
   }

@@ -17,22 +17,21 @@ export default function Send(props){
            },
             ans:props.ans
         } 
-      //   axios.post('http://localhost:3300/api/secret/addFileToRoom',data,  {
-      //        headers: {
-      //            'Authorization': `token ${token}`,
-      //          'content-Type': 'application/json',
-      //          'help': 'help'
-      //        }
-      //      })
-      //  .then((res) => {
-      //    console.log(res.data)
-      //   alert('נוסף בהצלחה')
-      //  })
-      //  .catch((error) => {
-      //    console.error(error)
-      //  })
-     console.log(data)
-     }
+        axios.post('http://localhost:3300/api/secret/addFileToRoom',data,  {
+             headers: {
+                 'Authorization': `token ${token}`,
+               'content-Type': 'application/json',
+               'help': 'help'
+             }
+           })
+       .then((res) => {
+         console.log(res.data)
+        alert('נוסף בהצלחה')
+       })
+       .catch((error) => {
+         console.error(error)
+       })
+      }
 
     return (  
          <div onClick={send} className="q-list1-open-send">
