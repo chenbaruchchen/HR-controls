@@ -128,7 +128,7 @@
         ]
     },
     {
-        "name": "sadir",
+        "name": "סדיר",
         "list": [
             {
                 "quatsion": "מבקרים",

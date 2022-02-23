@@ -10,7 +10,7 @@ export default function Room(props) {
   const [openBikoret,setOpenBikoret]=useState(true)
  return (
       <div style={{borderRadius:'30px'}} className="App">
-           {props.chosen}
+           {alert(props.chosen)}
 
 <Tabs setOpenBikoret={setOpenBikoret} />
   {openBikoret? <Bikoret roomId={props.chosen}/>  : <Chat roomId={props.chosen}/>}

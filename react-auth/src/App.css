@@ -16,3 +16,10 @@ body{
     color:#120303;
     margin-bottom: 50px;
   }
+
+
+  /* right eline text */
+  input, textarea { 
+    unicode-bidi:bidi-override; 
+    direction: RTL; 
+   }

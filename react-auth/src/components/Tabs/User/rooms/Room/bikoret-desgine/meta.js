@@ -2,6 +2,11 @@ export default function meta(val) {
     let meta=null
 
     switch (val.name) {
+        case 'סדיר':
+            meta={
+                name:'סדיר',type:'strings'
+            }
+            break;
         case 'sadir':
             meta={
                 name:'sadir',type:'strings'
