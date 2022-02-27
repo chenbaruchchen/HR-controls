@@ -1,4 +1,7 @@
-#HR-controls
-###cheack commit before new branch
+>>there is 2 diffrent db and 2 branches
 
-#####rewrite
+>>>>note before you use!
+
+
+first to do to next week 
+set up function to

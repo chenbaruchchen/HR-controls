@@ -1,0 +1,131 @@
+.component1-container {
+    flex: 0 0 auto;
+    width: 80vw;
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-color: var(--dl-color-gray-black);
+    border-width: 0px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .component1-add-room-icon {
+    fill: #dfe84a;
+    left: 20px;
+    right: auto;
+    width: 75px;
+    bottom: 30px;
+    height: 75px;
+    position: absolute;
+    transform: rotate(1080deg);
+    align-self: flex-start;
+    box-shadow: 2px 2px 10px 2px #d4d4d4,-2px -2px 10px 2px #d4d4d4;
+    transition: 2s;
+    border-color: #DFE84A;
+    border-width: 3px;
+    border-radius: 50px;
+  }
+  .component1-add-room-icon:hover {
+    fill: rgba(197, 168, 56, 0.52);
+    transform: rotate(180deg);
+    border-color: rgba(197, 168, 56, 0.52);
+  }
+  .component1-list-rooms {
+    flex: 0 0 auto;
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    margin-top: 60px;
+    overflow-y: scroll;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 22px;
+    margin-bottom: 60px;
+    flex-direction: column;
+    padding-bottom: 50px;
+    justify-content: flex-start;
+    background-color: #ececec;
+  }
+  .component1-text2 {
+    margin-top: 35px;
+    transition: 0.3s;
+    font-family: Georgia;
+    margin-bottom: 35px;
+  }
+  .component1-text2:hover {
+    color: #182e77;
+  }
+  .component1-container1 {
+    flex: 0 0 auto;
+    width: 40%;
+    display: flex;
+    position: relative;
+    box-shadow: 1px 1px 4px 2px #d8cece,-2px -2px 4px -1px #d8cece;
+    margin-top: 15px;
+    transition: 0.3s;
+    align-items: center;
+    padding-top: 15px;
+    border-color: #e1dee4;
+    border-style: outset;
+    border-width: 1px;
+    padding-left: 50px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    justify-content: center;
+    background-color: #e8e5e5;
+  }
+  .component1-container1:hover {
+    border-style: inset;
+    background-color: #d0cccc;
+  }
+  .component1-icon1 {
+    top: 15px;
+    left: 50px;
+    width: 24px;
+    position: absolute;
+    align-self: center;
+    transition: 0.3s;
+  }
+  .component1-icon1:hover {
+    fill: #422aaa;
+  }
+  .component1-text3 {
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  .component1-text3:hover {
+    color: #422aaa;
+  }
+  @media(max-width: 991px) {
+    .component1-list-rooms {
+      width: 80vw;
+      height: 60vh;
+    }
+    .component1-container1 {
+      width: 50%;
+    }
+  }
+  @media(max-width: 479px) {
+    .component1-add-room-icon {
+      margin-left: 30px;
+      margin-bottom: 50px;
+    }
+    .component1-list-rooms {
+      width: 95vw;
+    }
+    .component1-container1 {
+      width: 75%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .component1-icon1 {
+      width: 22px;
+      height: 22px;
+    }
+    .component1-text3 {
+      font-size: 17px;
+    }
+  }
+  

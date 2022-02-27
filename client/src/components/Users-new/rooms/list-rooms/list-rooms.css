@@ -1,0 +1,99 @@
+.list-rooms-list-rooms {
+    flex: 0 0 auto;
+    width: 80vw;
+    height: 60vh;
+    display: flex;
+    margin-top: 60px;
+    overflow-y: scroll;
+    transition: 0.3s;
+    align-items: center;
+    padding-top: 50px;
+    border-radius: 22px;
+    margin-bottom: 60px;
+    flex-direction: column;
+    padding-bottom: 50px;
+    justify-content: flex-start;
+    background-color: #f9f3f3;
+  }
+  .list-rooms-list-rooms:hover {
+    width: 85vw;
+    height: 65vh;
+    box-shadow: 5px 5px 3px 0px #f9f3f3;
+  }
+  .list-rooms-text {
+    margin-top: 35px;
+    transition: 0.3s;
+    font-family: Georgia;
+    margin-bottom: 35px;
+  }
+  .list-rooms-text:hover {
+    color: #182e77;
+  }
+  .list-rooms-container {
+    flex: 0 0 auto;
+    width: 60%;
+    display: flex;
+    position: relative;
+    box-shadow: 1px 1px 4px 2px #d8cece,-2px -2px 4px -1px #d8cece;
+    margin-top: 15px;
+    transition: 0.3s;
+    align-items: center;
+    padding-top: 15px;
+    border-color: #f9f3ff;
+    border-style: inset;
+    border-width: 1px;
+    padding-left: 50px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    justify-content: center;
+    background-color: #f9f3f3;
+  }
+  .list-rooms-container:hover {
+    box-shadow: 1px 1px -1px -1px #d8cece,-1px -1px -1px 1px #d8cece;
+    border-style: outset;
+    background-color: #e4dada;
+  }
+  .list-rooms-icon {
+    top: 15px;
+    left: 50px;
+    width: 24px;
+    position: absolute;
+    align-self: center;
+    transition: 0.3s;
+  }
+  .list-rooms-icon:hover {
+    fill: #422aaa;
+  }
+  .list-rooms-text2 {
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  .list-rooms-text2:hover {
+    color: #422aaa;
+  }
+  @media(max-width: 991px) {
+    .list-rooms-list-rooms {
+      width: 90vw;
+      height: 60vh;
+    }
+  }
+  @media(max-width: 479px) {
+    .list-rooms-list-rooms {
+      width: 90vw;
+    }
+    .list-rooms-container {
+      width: 90%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .list-rooms-icon {
+      width: 22px;
+      height: 22px;
+    }
+    .list-rooms-text2 {
+      font-size: 17px;
+    }
+  }
+  

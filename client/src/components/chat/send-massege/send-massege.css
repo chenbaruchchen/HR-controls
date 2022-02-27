@@ -1,0 +1,46 @@
+.send-massege-send-massege {
+    flex: 0 0 auto;
+    width: 70%;
+    bottom: 20vh;
+    height: 100px;
+    display: flex;
+    position: sticky;
+    box-shadow: 5px 5px 5px 1px #d4d4d4,-5px -5px 5px 1px #d4d4d4;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    justify-content: center;
+  }
+  .send-massege-textinput {
+    text-align: center;
+    transition: 0.3s;
+    padding-top: 15px;
+    border-width: 0px;
+    border-radius: 20px;
+    padding-bottom: 15px;
+    background-color: #dee2e6;
+  }
+  .send-massege-textinput:focus {
+    width: 75%;
+    font-size: 18px;
+    border-color: green;
+    border-width: 2px;
+  }
+  .send-massege-icon {
+    fill: #358a27;
+    width: 32px;
+    height: 32px;
+    margin-left: 20px;
+  }
+  @media(max-width: 479px) {
+    .send-massege-send-massege {
+      width: 90%;
+      box-shadow: 2px 2px 2px 2px #d4d4d4,-2px -2px 2px 1px #d4d4d4;
+      border-radius: 25px;
+    }
+    .send-massege-textinput {
+      width: 80%;
+    }
+  }
+  

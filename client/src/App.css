@@ -1,0 +1,30 @@
+body{
+  margin:0px;
+  padding: 0px;
+  display: flex;
+   justify-content: center;
+  align-items: center;
+  }
+
+  .App{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+    flex-direction:column;
+    color:#120303;
+    margin-bottom: 50px;
+     
+  }
+
+
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  /* right eline text */
+  input, textarea { 
+    unicode-bidi:bidi-override; 
+    direction: RTL; 
+   }

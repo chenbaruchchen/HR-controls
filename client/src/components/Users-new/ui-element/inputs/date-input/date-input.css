@@ -1,0 +1,15 @@
+.date-input-container {
+  display: flex;
+  position: relative;
+}
+.date-input-textinput {
+  color: #141313;
+  transition: 0.3s;
+  border-color: #a8a6a6;
+  border-radius: 22px;
+  background-color: #f1eeee;
+}
+.date-input-textinput:focus {
+  color: #f1eeee;
+  background-color: #141313;
+}

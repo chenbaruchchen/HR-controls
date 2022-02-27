@@ -1,0 +1,222 @@
+Link{
+  color: inherit;
+  text-decoration: inherit;
+
+ 
+} 
+ 
+
+
+
+.sidebar1-sidebar {
+  top: 0;
+  left: 0px;
+  right: auto;
+  width: 300px;
+  bottom: auto;
+  height: 100vh;
+  display: flex;
+  padding: var(--dl-space-space-twounits);
+  z-index: 100;
+  position: absolute;
+  align-self: flex-start;
+  box-shadow: 5px 2px 10px 0px #d4d4d4;
+  transition: 0.3s;
+  align-items: flex-start;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #F9FBFC;
+  border-top-left-radius: 0;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 30px;
+}
+.sidebar1-sidebar:hover {
+  box-shadow: 5px 2px 10px 2px #e0ddce;
+}
+.sidebar1-nav {
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+  margin-top: 100px;
+  align-items: flex-start;
+  margin-left: 25px;
+  flex-direction: column;
+}
+.sidebar1-container {
+  display: flex;
+  padding: 10px;
+  align-self: flex-start;
+  margin-top: 15px;
+  transition: 0.3s;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.sidebar1-container:hover {
+  border-color: var(--dl-color-gray-black);
+  border-width: 0px;
+  border-radius: 12px;
+  background-color: #E9F3FB;
+}
+.sidebar1-text {
+  font-size: 23px;
+  transition: 0.3s;
+  margin-bottom: 0px;
+}
+.sidebar1-text:hover {
+  font-size: 22px;
+  border-radius: 12px;
+  background-color: #E9F3FB;
+}
+.sidebar1-icon {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.sidebar1-container1 {
+  display: flex;
+  padding: 10px;
+  align-self: flex-start;
+  margin-top: 15px;
+  transition: 0.3s;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.sidebar1-container1:hover {
+  border-color: var(--dl-color-gray-black);
+  border-width: 0px;
+  border-radius: 12px;
+  background-color: #E9F3FB;
+}
+.sidebar1-text1 {
+  font-size: 23px;
+  transition: 0.3s;
+  margin-bottom: 0px;
+}
+.sidebar1-text1:hover {
+  font-size: 22px;
+  border-radius: 12px;
+  background-color: #E9F3FB;
+}
+.sidebar1-icon02 {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.sidebar1-container2 {
+  display: flex;
+  padding: 10px;
+  align-self: flex-start;
+  margin-top: 15px;
+  transition: 0.3s;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.sidebar1-container2:hover {
+  border-color: var(--dl-color-gray-black);
+  border-width: 0px;
+  border-radius: 12px;
+  background-color: #E9F3FB;
+}
+.sidebar1-text2 {
+  font-size: 23px;
+  transition: 0.3s;
+  margin-bottom: 0px;
+}
+.sidebar1-text2:hover {
+  font-size: 22px;
+  border-radius: 12px;
+  background-color: #E9F3FB;
+}
+.sidebar1-icon04 {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+.sidebar1-profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: var(--dl-space-space-unit);
+  border-color: var(--dl-color-gray-900);
+  border-width: 1px;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+}
+.sidebar1-icon06 {
+  width: 30px;
+  height: 30px;
+}
+.sidebar1-container3 {
+  display: flex;
+  align-items: flex-start;
+  margin-left: var(--dl-space-space-halfunit);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar1-text3 {
+  font-size: 1.15rem;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.sidebar1-icon08 {
+  top: 25px;
+  left: 25px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  transition: 0.3s;
+}
+.sidebar1-icon08:hover {
+  transform: rotate(360deg);
+}
+@media(max-width: 991px) {
+  .sidebar1-profile {
+    padding-left: var(--dl-space-space-halfunit);
+    padding-right: var(--dl-space-space-halfunit);
+  }
+}
+@media(max-width: 767px) {
+  .sidebar1-icon08 {
+    display: flex;
+  }
+}
+@media(max-width: 479px) {
+  .sidebar1-nav {
+    margin-left: 25px;
+  }
+  .sidebar1-text {
+  
+    font-size: 21px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+  .sidebar1-text1 {
+    
+    font-size: 21px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+  .sidebar1-text2 {
+     font-size: 21px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+}
