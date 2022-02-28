@@ -43,9 +43,9 @@ export default function List(props) {
           getFiles()
     },[])
     if (!list) return <h3>מחפש שאלונים שבוצעו</h3>
-    function getNameFromType(type) {
-        if (type==='tash') {
-            return 'ת"ש'
+    function getTextFromKey(meta) {
+        if (meta.type==='tash') {
+            return `ת"ש - ${meta.subType} `
         }
         return 'שם לא הוגדר'
     }
@@ -62,7 +62,7 @@ export default function List(props) {
                    <svg viewBox="0 0 1024 1024" className="component1-icon1">
                       <path d="M384 64h640v128h-640v-128zM384 448h640v128h-640v-128zM384 832h640v128h-640v-128zM0 128c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128zM0 512c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128zM0 896c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128z"></path>
                     </svg>
-                    <span className="component1-text3">ת"ש</span>
+                    <span className="component1-text3">{getTextFromKey(key.meta)}</span>
                   </div>
                   )  
                 })

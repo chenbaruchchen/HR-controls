@@ -36,7 +36,8 @@ const Shelon = (props) => {
         />
       )}
 
-      <Send ans={ans}  />
+      <Send
+shelon={props.shelon} ans={ans}  />
     </div>
   );
 };

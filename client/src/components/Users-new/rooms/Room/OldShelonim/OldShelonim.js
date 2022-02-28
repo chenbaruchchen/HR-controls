@@ -3,7 +3,7 @@ import List from "./ListShelonim/ListShelonim"
 import Chosen from "./Chosen/Chosen"
  export default function App(props) {
     const [chosen,setChosen]=useState(null)
-   if (chosen) return <Chosen/>
+   if (chosen) return <Chosen chosen={chosen}/>
    return <List setChosen={setChosen}/>
 }
  

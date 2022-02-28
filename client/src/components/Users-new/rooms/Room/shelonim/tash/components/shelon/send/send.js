@@ -21,7 +21,12 @@ const Send = (props) => {
     };
 
     let data={
-      type:'tash',file:props.ans,roomId:getRoom()
+      meta:{
+        type:'tash', subType:props.shelon.name
+      }
+      ,file:props.ans
+      
+      ,roomId:getRoom()
       
     }
      
@@ -51,7 +56,7 @@ const Send = (props) => {
     } 
     
     addFile()
-   }
+    }
   return (
     <div onClick={()=>send()} className="send-container">
       <button className="send-button button">{props.button}</button>

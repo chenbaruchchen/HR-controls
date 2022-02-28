@@ -117,6 +117,7 @@ function Quatsion(props) {
   if (props.quatsion.type === "string") {
     input = (
       <TextInput
+      value={value}
         setValue={(e) => {
           props.setValByIndex(e.target.value, props.index);
           setValue(e.target.value);
@@ -125,7 +126,10 @@ function Quatsion(props) {
     );
   } else if (props.quatsion.type === "date") {
     input = (
+      
       <DatePicker
+      value={value}
+
         selected={props.getValByIndex(props.index)}
         onChange={(date) => {
           props.setValByIndex(date, props.index);

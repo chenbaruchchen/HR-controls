@@ -8,6 +8,7 @@ const TextInput = (props) => {
   return (
     <div className="text-input-container">
       <input
+      value={props.value}
         onChange={props.setValue}
         type="text"
         placeholder={props.textinput_placeholder}
