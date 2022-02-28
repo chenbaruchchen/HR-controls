@@ -83,10 +83,10 @@ const path = require('path');
  
  
 // Step 1:
-app.use(express.static(path.resolve(__dirname, "./react-auth/build")));
+app.use(express.static(path.resolve(__dirname, "./client/build")));
 // Step 2:
 app.get("*", function (request, response) {
-  response.sendFile(path.resolve(__dirname, "./react-auth", "index.html"));
+  response.sendFile(path.resolve(__dirname, "./client", "index.html"));
 });
 
 
