@@ -28,8 +28,8 @@ export default function List(props) {
           
               axios.post('/api/user/rooms/getFilesByRoom',{roomId:getRoomId()}, { headers: {"Authorization" : `Bearer ${getToken()}`}})
               .then(function (response) {
-                 console.log(response)
-                 setList(response.data)
+
+                  setList(response.data)
                  
           
                })
@@ -39,6 +39,7 @@ export default function List(props) {
           
           
           } 
+
           getFiles()
     },[])
     if (!list) return <h3>מחפש שאלונים שבוצעו</h3>
@@ -46,7 +47,7 @@ export default function List(props) {
         if (type==='tash') {
             return 'ת"ש'
         }
-        else return 'שם לא הוגדר'
+        return 'שם לא הוגדר'
     }
     return (
         <div className="component1-list-rooms">
@@ -55,12 +56,13 @@ export default function List(props) {
 
         {
                 list.map((key,index)=>{
-                  return(
-                    <div onClick={props.setChosen(key)} key={index} className="component1-container1">
-                    <svg viewBox="0 0 1024 1024" className="component1-icon1">
+                   return(
+                    <div onClick={()=>props.setChosen(key)} key={index} className="component1-container1">
+                   
+                   <svg viewBox="0 0 1024 1024" className="component1-icon1">
                       <path d="M384 64h640v128h-640v-128zM384 448h640v128h-640v-128zM384 832h640v128h-640v-128zM0 128c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128zM0 512c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128zM0 896c0-70.692 57.308-128 128-128s128 57.308 128 128c0 70.692-57.308 128-128 128s-128-57.308-128-128z"></path>
                     </svg>
-                    <span className="component1-text3">{getNameFromType(key.type)}</span>
+                    <span className="component1-text3">ת"ש</span>
                   </div>
                   )  
                 })

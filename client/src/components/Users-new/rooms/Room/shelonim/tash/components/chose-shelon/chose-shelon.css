@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  color:rgb(20, 20, 20)!important
 }
 .chose-shelon-container1 {
   flex: 0 0 auto;
