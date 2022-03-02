@@ -10,12 +10,15 @@ import Tabs from './components/Tabs'
 import UserTab from './components/Tabs/User/User'
 import TabBar from './components/ui-element/tab-bar/tab-bar'
  
+import { useAlert } from 'react-alert'
+
 import Users from './components/Users-new/Users';
 function App() {
 const [tab,setTab]=useState(UserTab)
   const { token, setToken } = useToken();
 
- 
+  const alert = useAlert()
+
   if(!token) {
     return <Gust setToken={setToken} />
   }
@@ -46,7 +49,7 @@ const [tab,setTab]=useState(UserTab)
   
     window.localStorage.setItem('token', JSON.stringify(localStorage));
 
-console.log(window.localStorage.getItem('token'))
+// console.log(window.localStorage.getItem('token'))
 
 
    
@@ -54,7 +57,7 @@ console.log(window.localStorage.getItem('token'))
   .catch(function (error) {
     // handle error
     console.log(error);
-    alert('some kind of problem in refresh token')
+    alert.error('חידוש התחברות אל השרת לא צלחה')
     return
   })
   .then(function () {

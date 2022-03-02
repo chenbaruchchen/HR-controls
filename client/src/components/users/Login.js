@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
  import Singin from './Signin'
  import {setUserInLocal} from '../scripts/setUser'
+ import { useAlert } from 'react-alert'
 
 function setExpiredInLocalStorage() {
   const now = Date.now() 
@@ -36,6 +37,7 @@ export default function Login({ setToken }) {
   const [openRegister,setOpenRegister]=useState(false)
   const [email, setUserName] = useState();
   const [password, setPassword] = useState();
+  const alert = useAlert()
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -50,7 +52,7 @@ export default function Login({ setToken }) {
       setExpiredInLocalStorage()
     }
     else{
-      alert('problem with token')
+      alert.error('בעיה בהתחברות')
     }
   
    
