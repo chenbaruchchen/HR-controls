@@ -61,6 +61,7 @@ function save(filename, data) {
 
 
 export function tashToExcel(shelon){
+  console.log('tashToExcel')
     ///get the shelon quatsion from the sourcs
     let source=shelonTash[0]
     shelonTash.forEach((shelonSorce)=>{
@@ -79,8 +80,7 @@ export function tashToExcel(shelon){
     const sheet = workbook.addWorksheet(subject.name);
 
     subject.list.forEach((q,index)=>{
-      
-      let ans=shelon?.file?.[indexSubject]?.[index].value
+      let ans=shelon?.file?.[indexSubject]?.[index]?.value
       let quatsion=source.subjects[indexSubject].list[index].name
 
        sheet.addRow([quatsion, ans]);
