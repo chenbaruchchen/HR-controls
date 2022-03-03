@@ -9,6 +9,7 @@ import {
 import AddRoom from "../addRoom/addRoom";
 import Rooms from "../rooms/Rooms";
 import Sidebar1 from "./sidebar/sidebar";
+import Home from '../home/Home'
 export default function App() {
   return (
    
@@ -37,7 +38,4 @@ export default function App() {
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
  
