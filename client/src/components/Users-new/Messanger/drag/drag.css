@@ -1,0 +1,22 @@
+.messanger-drag-messanger-drag {
+    position: fixed;
+    flex: 0 0 auto;
+    height: auto;
+    display: flex;
+    padding: 20px;
+    /* max-width: 50px; */
+    box-shadow: 2px 2px 10px 0px #d4d4d4,-2px -2px 10px 0px #d4d4d4;
+    align-items: center;
+    border-color: #eae2e2;
+    border-width: 1px;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: rgba(36, 195, 194, 0.75);
+  }
+  .messanger-drag-icon {
+    fill: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  
