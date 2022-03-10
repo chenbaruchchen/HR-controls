@@ -1,9 +1,21 @@
 import '../chosen.css'
 
-import {tashToExcel} from '../../../../../scripts/tableToExcel'
+import {tashToExcel, sadirToExcel,solidersToExcel} from '../../../../../scripts/tableToExcel'
+ 
 
 
 const ChosenHeader = (props) => {
+  function shelonToExcel() {
+     if (props.chosen.meta.type==="tash"){
+      tashToExcel(props.chosen)
+    }
+    else if(props.chosen.meta.type==="sadir"){
+      sadirToExcel(props.chosen)
+    }
+    else if(props.chosen.meta.type==="soldiers"){
+      solidersToExcel(props.chosen)
+    }
+  }
   return (
   
 
@@ -17,7 +29,7 @@ const ChosenHeader = (props) => {
             <span> למסמך</span>
           </span>
         </div>
-        <div className="chosen-excel icon-btn" onClick={()=>tashToExcel(props.chosen)}>
+        <div className="chosen-excel icon-btn" onClick={()=>shelonToExcel(props.chosen)}>
           <svg viewBox="0 0 877.7142857142857 1024" className="chosen-icon2">
             <path d="M838.857 217.143c21.143 21.143 38.857 63.429 38.857 93.714v658.286c0 30.286-24.571 54.857-54.857 54.857h-768c-30.286 0-54.857-24.571-54.857-54.857v-914.286c0-30.286 24.571-54.857 54.857-54.857h512c30.286 0 72.571 17.714 93.714 38.857zM585.143 77.714v214.857h214.857c-3.429-9.714-8.571-19.429-12.571-23.429l-178.857-178.857c-4-4-13.714-9.143-23.429-12.571zM804.571 950.857v-585.143h-237.714c-30.286 0-54.857-24.571-54.857-54.857v-237.714h-438.857v877.714h731.429zM245.143 817.143v60.571h160.571v-60.571h-42.857l58.857-92c6.857-10.857 10.286-19.429 12-19.429h1.143c0.571 2.286 1.714 4 2.857 5.714 2.286 4.571 5.714 8 9.714 13.714l61.143 92h-43.429v60.571h166.286v-60.571h-38.857l-109.714-156 111.429-161.143h38.286v-61.143h-159.429v61.143h42.286l-58.857 90.857c-6.857 10.857-12 19.429-12 18.857h-1.143c-0.571-2.286-1.714-4-2.857-5.714-2.286-4-5.143-8-9.714-13.143l-60.571-90.857h43.429v-61.143h-165.714v61.143h38.857l108 155.429-110.857 161.714h-38.857z"></path>
           </svg>

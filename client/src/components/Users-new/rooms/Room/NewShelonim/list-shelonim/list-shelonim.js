@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 
 import './list-shelonim.css'
 import Tash from '../../shelonim/tash/App'
+import Sadir from '../../shelonim/sadir/App'
+import Soldiers from '../../shelonim/soldiers/App'
 const ListShelonim = (props) => {
   return (
     <div className="list-shelonim-container">
@@ -24,13 +26,23 @@ const ListShelonim = (props) => {
           <span className="list-shelonim-text1">ת"ש</span>
         </div>
 
-        <div className="list-shelonim-container1">
+        <div  onClick={()=>{
+          props.setChosen(<Sadir/>)
+        }}  className="list-shelonim-container1">
           <svg  viewBox="0 0 1024 1024" className="list-shelonim-icon2">
             <path d="M86 682v-84h340v84h-340zM768 598h170v84h-170v172h-86v-172h-170v-84h170v-172h86v172zM598 256v86h-512v-86h512zM598 426v86h-512v-86h512z"></path>
           </svg>
-          <span className="list-shelonim-text1">סדיר דמו</span>
+          <span className="list-shelonim-text1">סדיר </span>
         </div>
        
+        <div  onClick={()=>{
+          props.setChosen(<Soldiers/>)
+        }}  className="list-shelonim-container1">
+          <svg  viewBox="0 0 1024 1024" className="list-shelonim-icon2">
+            <path d="M86 682v-84h340v84h-340zM768 598h170v84h-170v172h-86v-172h-170v-84h170v-172h86v172zM598 256v86h-512v-86h512zM598 426v86h-512v-86h512z"></path>
+          </svg>
+          <span className="list-shelonim-text1">שיחת חיילי חובה </span>
+        </div>
       </div>
     </div>
   )

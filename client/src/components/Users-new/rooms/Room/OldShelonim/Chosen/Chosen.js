@@ -1,5 +1,7 @@
 import Tash from './Tash'
 
+import Sadir from './Sadir'
+import Soldiers from './Soldiers'
 
 
 
@@ -14,9 +16,10 @@ import ChosenHeader from './chosen-header/chosen-header'
 const Chosen = (props) => {
   return (
     <div className="chosen-chosen">
-
+{console.log(props.chosen)}
 {props.chosen.meta.type==='tash'&&<Tash chosen={props.chosen}/>}
-
+{props.chosen.meta.type==='sadir'&&<Sadir chosen={props.chosen}/>}
+{props.chosen.meta.type==='soldiers'&&<Soldiers chosen={props.chosen}/>}
       <ChosenHeader chosen={props.chosen}/>
 
       <div className="chosen-body">

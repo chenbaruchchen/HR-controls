@@ -1,0 +1,44 @@
+.send-container {
+  display: flex;
+  position: relative;
+  border-color: var(--dl-color-gray-black);
+  border-width: 0px;
+}
+.send-button {
+  color: #1e0c06;
+  width: 300px;
+  font-size: 20px;
+  margin-top: 25px;
+  text-align: center;
+  transition: 0.3s;
+  padding-top: 18px;
+  border-color: #e8e4e4;
+  border-width: 2px;
+  padding-left: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  padding-right: 30px;
+  padding-bottom: 18px;
+  background-color: #e6d4d4;
+}
+.send-button:hover {
+  box-shadow: 1px 1px 3px 1px #dcadad, -1px -1px 3px 1px #d4d4d4;
+  border-color: #ad9292;
+  border-width: 1px;
+  border-radius: 15px;
+  background-color: #e4dada;
+}
+@media (max-width: 479px) {
+  .send-button {
+    color: #31130a;
+    width: 60vw;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-color: #9c8e8e;
+    border-width: 0px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    background-color: #e6d4d4;
+  }
+}

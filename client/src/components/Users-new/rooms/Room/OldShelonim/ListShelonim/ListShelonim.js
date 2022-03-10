@@ -47,6 +47,12 @@ export default function List(props) {
         if (meta.type==='tash') {
             return `ת"ש - ${meta.subType} `
         }
+      else  if (meta.type==='sadir') {
+          return 'סדיר'
+      }
+      else  if (meta.type==='soldiers') {
+        return 'שיחת חיילי חובה'
+    }
         return 'שם לא הוגדר'
     }
     return (

@@ -1,0 +1,40 @@
+.chose-shelon-container {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color:rgb(20, 20, 20)!important
+}
+.chose-shelon-container1 {
+  flex: 0 0 auto;
+  width: 60%;
+  display: flex;
+  margin-top: 15px;
+  transition: 0.3s;
+  align-items: center;
+  padding-top: 15px;
+  padding-left: 50px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  padding-right: 50px;
+  padding-bottom: 15px;
+  justify-content: space-between;
+  background-color: #f9f3f3;
+}
+.chose-shelon-container1:hover {
+  background-color: #e4dada;
+}
+.chose-shelon-icon {
+  width: 30px;
+  height: 30px;
+}
+.chose-shelon-text {
+  font-size: 20px;
+}
+@media (max-width: 479px) {
+  .chose-shelon-container1 {
+    width: 85%;
+  }
+}

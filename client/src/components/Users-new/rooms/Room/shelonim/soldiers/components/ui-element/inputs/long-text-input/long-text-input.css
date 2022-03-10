@@ -1,0 +1,19 @@
+.long-text-input-container {
+  display: flex;
+  position: relative;
+}
+.long-text-input-textarea {
+  color: #141313;
+  height: 75px;
+  transition: 0.3s;
+  border-width: 0px;
+  border-radius: 15px;
+  background-color: #f1eeee;
+}
+.long-text-input-textarea:focus {
+  color: #f1eeee;
+  text-align: right;
+  border-width: 0px;
+  border-radius: 22px;
+  background-color: #141313;
+}

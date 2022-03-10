@@ -1,6 +1,7 @@
 import { saveAs } from "file-saver";
 import shelonTash from '../rooms/Room/shelonim/tash/files/shelonim'
-
+import {sadir}  from '../rooms/Room/shelonim/sadir/files/src'
+import solider  from '../rooms/Room/shelonim//soldiers/files/src'
 const ExcelJS = require('exceljs');
 
 
@@ -105,6 +106,103 @@ export function tashToExcel(shelon){
       }
  }
 
+ 
+
+export function sadirToExcel(shelon) {
+  console.log(shelon)
+  console.log(sadir)
+
+
+   ///get the shelon quatsion from the sourcs
+   
+    
+  
+   
+   const workbook = new ExcelJS.Workbook();
+    
+
+
+   sadir.forEach((subject,indexSubject)=>{
+
+   const sheet = workbook.addWorksheet(subject.name);
+
+   subject.list.forEach((q,index)=>{
+      
+     let details=shelon?.file?.[indexSubject]?.[index]?.details
+     let found=shelon?.file?.[indexSubject]?.[index]?.found
+
+     let quatsion=sadir[indexSubject].list[index].name
+    
+      sheet.addRow([q.quatsion,details,found]); 
+ 
+   })
+
+   })
+
+
+
+     saveFile(`${shelon.meta.subType} ביקורת `, workbook)
+
+    async function saveFile(fileName, workbook) {
+       const xls64 = await workbook.xlsx.writeBuffer({ base64: true });
+       saveAs(
+         new Blob([xls64], {
+           type:
+             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+         }),
+         fileName
+       );
+     }
+}
+export function solidersToExcel(shelon) {
+  console.log(shelon)
+
+
+
+   ///get the shelon quatsion from the sourcs
+   
+    
+  
+   
+   const workbook = new ExcelJS.Workbook();
+    
+
+
+   solider.forEach((subject,indexSubject)=>{
+
+   const sheet = workbook.addWorksheet(subject.name);
+
+   subject.list.forEach((q,index)=>{
+      
+     let details=shelon?.file?.[indexSubject]?.[index]?.details
+     let found=shelon?.file?.[indexSubject]?.[index]?.found
+
+     let quatsion=solider[indexSubject].list[index].name
+    
+      sheet.addRow([q,details,found]); 
+ 
+   })
+
+   })
+
+
+
+     saveFile(`${shelon.meta.subType} ביקורת `, workbook)
+
+    async function saveFile(fileName, workbook) {
+       const xls64 = await workbook.xlsx.writeBuffer({ base64: true });
+       saveAs(
+         new Blob([xls64], {
+           type:
+             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+         }),
+         fileName
+       );
+     }
+}
+
+
+
 
 // import Excel from "exceljs";
 // import { saveAs } from "file-saver";
@@ -140,3 +238,5 @@ export function tashToExcel(shelon){
   //   );
   // }
 // }
+
+
