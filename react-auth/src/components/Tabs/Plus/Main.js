@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-import './add-room.css'
+import "./add-room.css";
 
 const AddRoom = () => {
   return (
@@ -45,7 +45,7 @@ const AddRoom = () => {
         <span className="add-room-text4">Text</span>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AddRoom
+export default AddRoom;

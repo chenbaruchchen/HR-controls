@@ -1,14 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import './on-top.css'
-
+import "./on-top.css";
 
 //// the component get element in props andsize from parent
 const OnTop = (props) => {
-  return <div className="on-top-container">
-   
-    {props.element}
-    </div>
-}
+  return <div className="on-top-container">{props.element}</div>;
+};
 
-export default OnTop
+export default OnTop;

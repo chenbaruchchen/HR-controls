@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './other-massege.css'
+import "./other-massege.css";
 
 const OtherMsg = (props) => {
   return (
@@ -12,17 +12,17 @@ const OtherMsg = (props) => {
       </div>
       <span className="other-msg-text1">{props.massege?.user.username}</span>
     </div>
-  )
-}
+  );
+};
 
 OtherMsg.defaultProps = {
-  Text: 'Text',
-  Text1: 'Text',
-}
+  Text: "Text",
+  Text1: "Text",
+};
 
 OtherMsg.propTypes = {
   Text: PropTypes.string,
   Text1: PropTypes.string,
-}
+};
 
-export default OtherMsg
+export default OtherMsg;

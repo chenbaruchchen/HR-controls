@@ -1,16 +1,13 @@
 .on-top-container {
-    width: 100%;
-    /* min-height: 100%; */
-    z-index: 10;
-    color:black;
-    top:auto;
-    left:auto;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
-   /* min-height: 200vh;
+  width: 100%;
+  /* min-height: 100%; */
+  z-index: 10;
+  color: black;
+  top: auto;
+  left: auto;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  /* min-height: 200vh;
     min-width: 100vw;  */
-   
-  }
-  
-  
+}

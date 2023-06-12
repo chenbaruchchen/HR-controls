@@ -2,28 +2,29 @@ const mongoose = require("mongoose");
 
 const User = require("../models/User");
 const bcrypt = require("bcryptjs");
-const jwt = require('jsonwebtoken')
+const jwt = require("jsonwebtoken");
 
 module.exports = {
-  refreshToken:(req,res) => {
-
-     
-    let user=req.body
-            ////here client send user with id=_id of mongoos
-      const token = jwt.sign({ id: user.id,email: user.email }, process.env.token, {
+  refreshToken: (req, res) => {
+    let user = req.body;
+    ////here client send user with id=_id of mongoos
+    const token = jwt.sign(
+      { id: user.id, email: user.email },
+      process.env.token,
+      {
         expiresIn: "10H",
-      });
+      }
+    );
 
-      return res.send(token)
-      // return res.status(200).json({
-      //   user:{
-      //     email:user.email,
-      //     username:user.username,
-      //     id:user._id
-      //   },
-      //    token
-      // });
-    
+    return res.send(token);
+    // return res.status(200).json({
+    //   user:{
+    //     email:user.email,
+    //     username:user.username,
+    //     id:user._id
+    //   },
+    //    token
+    // });
   },
   login: (req, res) => {
     console.log("login");
@@ -35,10 +36,9 @@ module.exports = {
     User.findOne({ email: email })
       .then((user) => {
         if (!user) {
-
-            /////send!!! נגמר שירות
+          /////send!!! נגמר שירות
           res.status(404);
-          return  
+          return;
         }
 
         // Load hash from your password DB.
@@ -52,18 +52,21 @@ module.exports = {
           }
 
           if (isMatch) {
-            
-            const token = jwt.sign({ id: user._id,email: user.email }, process.env.token, {
-              expiresIn: "1H",
-            });
+            const token = jwt.sign(
+              { id: user._id, email: user.email },
+              process.env.token,
+              {
+                expiresIn: "1H",
+              }
+            );
 
             return res.status(200).json({
-              user:{
-                email:user.email,
-                username:user.username,
-                id:user._id
+              user: {
+                email: user.email,
+                username: user.username,
+                id: user._id,
               },
-               token
+              token,
             });
           } else {
             res.send("משתמש קיים ולא תואם, צריך למצוא ססמא");
@@ -75,8 +78,6 @@ module.exports = {
 
     res.status(200);
   },
-
-  
 
   register: (req, res) => {
     const { username, email, password } = req.body;
@@ -117,5 +118,4 @@ module.exports = {
     console.log("logout");
     res.status(200);
   },
-
 };

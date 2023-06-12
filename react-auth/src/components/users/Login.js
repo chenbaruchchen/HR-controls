@@ -1,86 +1,89 @@
- import './users.css'
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
- import Singin from './Signin'
- import {setUserInLocal} from '../scripts/setUser'
+import "./users.css";
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import Singin from "./Signin";
+import { setUserInLocal } from "../scripts/setUser";
 
 function setExpiredInLocalStorage() {
-  const now = Date.now() 
+  const now = Date.now();
 
   ////expired in 3*60*1000
-  const expired= now+ 3*600*1000
+  const expired = now + 3 * 600 * 1000;
 
-  ///set in local 
+  ///set in local
 
-  window.localStorage.setItem('expired',  expired);
+  window.localStorage.setItem("expired", expired);
 
   // setTimeout(refreshToken, 3*600*1000)
 }
 
-
 async function loginUser(credentials) {
-    return fetch('/api/users/login', {
-   method: 'POST',
-   headers: {
-     'Content-Type': 'application/json'
-   },
-   body: JSON.stringify(credentials)
- })
-   .then(data => data.json()
-  )
-  
+  return fetch("/api/users/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(credentials),
+  }).then((data) => data.json());
 }
 
 export default function Login({ setToken }) {
-
-  const [openRegister,setOpenRegister]=useState(false)
+  const [openRegister, setOpenRegister] = useState(false);
   const [email, setUserName] = useState();
   const [password, setPassword] = useState();
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-   
+
     const token = await loginUser({
-        email,
-      password
+      email,
+      password,
     });
 
-    if(token){
-      setToken(token)
-      setExpiredInLocalStorage()
+    if (token) {
+      setToken(token);
+      setExpiredInLocalStorage();
+    } else {
+      alert("problem with token");
     }
-    else{
-      alert('problem with token')
-    }
-  
-   
-    
-  }
+  };
 
   if (openRegister) {
-    return(
-      <Singin setOpenRegister={setOpenRegister}/>
-    )
+    return <Singin setOpenRegister={setOpenRegister} />;
   }
-  return(
-    <div className='stack'>
+  return (
+    <div className="stack">
       <h1>התחברות</h1>
-            
-          <input className='round' placeholder='abcde@mail.com' type="text" onChange={e => setUserName(e.target.value)} />
-       
-        
-          <input className='round' placeholder='password'  type="password" onChange={e => setPassword(e.target.value)} />
-           <div onClick={handleSubmit} className='button' style={submitStyle} type="submit">התחברות</div>
-        
- 
 
-      <a  onClick={()=>setOpenRegister(true)}>לעמוד הרשמה</a>
+      <input
+        className="round"
+        placeholder="abcde@mail.com"
+        type="text"
+        onChange={(e) => setUserName(e.target.value)}
+      />
+
+      <input
+        className="round"
+        placeholder="password"
+        type="password"
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <div
+        onClick={handleSubmit}
+        className="button"
+        style={submitStyle}
+        type="submit"
+      >
+        התחברות
+      </div>
+
+      <a onClick={() => setOpenRegister(true)}>לעמוד הרשמה</a>
     </div>
-  )
+  );
 }
 
 Login.propTypes = {
-  setToken: PropTypes.func.isRequired
+  setToken: PropTypes.func.isRequired,
 };
 
 const stack = {
@@ -91,17 +94,17 @@ const stack = {
   justifyContent: "flex-start",
   alignItems: "center",
   overflow: "visible",
-}
+};
 
 const inputStyle = {
-  margin:10,
+  margin: 10,
   flexShrink: 0,
   width: 240,
   height: 40,
   // boxShadow: "1px 2px 2px 1px rgba(0, 0, 0, 0.25)",
   // overflow: "visible",
   borderRadius: 13,
-}
+};
 
 const submitStyle = {
   boxSizing: "border-box",
@@ -112,6 +115,6 @@ const submitStyle = {
   justifyContent: "flex-end",
   alignItems: "center",
   padding: "0px 16px 0px 16px",
-   overflow: "visible",
+  overflow: "visible",
   borderRadius: 18,
-}
+};

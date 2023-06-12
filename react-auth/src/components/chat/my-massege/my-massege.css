@@ -1,34 +1,33 @@
 .my-msg-my-msg {
-    flex: 0 0 auto;
-    width: 100%;
-    display: flex;
-    margin-top: 15px;
-    align-items: flex-start;
-    padding-top: 10px;
-    margin-bottom: 15px;
-    flex-direction: column;
-    padding-bottom: 10px;
-    justify-content: flex-start;
-  }
-  .my-msg-content-box {
-    flex: 0 0 auto;
-    height: 100%;
-    display: flex;
-    min-width: 50px;
-    align-items: center;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 30px;
-    flex-direction: column;
-    padding-bottom: 10px;
-    justify-content: flex-start;
-    background-color: #e2cfcf;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-  .my-msg-text1 {
-    font-size: 13px;
-    margin-top: 5px;
-  }
-  
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  margin-top: 15px;
+  align-items: flex-start;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  flex-direction: column;
+  padding-bottom: 10px;
+  justify-content: flex-start;
+}
+.my-msg-content-box {
+  flex: 0 0 auto;
+  height: 100%;
+  display: flex;
+  min-width: 50px;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 30px;
+  flex-direction: column;
+  padding-bottom: 10px;
+  justify-content: flex-start;
+  background-color: #e2cfcf;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.my-msg-text1 {
+  font-size: 13px;
+  margin-top: 5px;
+}

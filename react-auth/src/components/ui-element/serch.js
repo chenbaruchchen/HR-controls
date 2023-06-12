@@ -1,66 +1,70 @@
-import React from 'react'
- import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+import React from "react";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
 
 function App(props) {
   const items = [
     {
       id: 0,
-      name: 'Cobol'
+      name: "Cobol",
     },
     {
       id: 1,
-      name: 'JavaScript'
+      name: "JavaScript",
     },
     {
       id: 2,
-      name: 'Basic'
+      name: "Basic",
     },
     {
       id: 3,
-      name: 'PHP'
+      name: "PHP",
     },
     {
       id: 4,
-      name: 'Java'
-    }
-  ]
+      name: "Java",
+    },
+  ];
 
   const handleOnSearch = (string, results) => {
     // onSearch will have as the first callback parameter
     // the string searched and for the second the results.
-    console.log(string, results)
-  }
+    console.log(string, results);
+  };
 
   const handleOnHover = (result) => {
     // the item hovered
-    console.log(result)
-  }
+    console.log(result);
+  };
 
   const handleOnSelect = (item) => {
     // the item selected
-    console.log(item)
-    props.onSelect(item)
-  }
+    console.log(item);
+    props.onSelect(item);
+  };
 
   const handleOnFocus = () => {
-    console.log('Focused')
-  }
+    console.log("Focused");
+  };
 
   const formatResult = (item) => {
-    return ( <>
-        <span style={{ display: 'block', textAlign: 'left' }}>id: {item.id}</span>
-        <span style={{ display: 'block', textAlign: 'left' }}>name: {item.name}</span>
+    return (
+      <>
+        <span style={{ display: "block", textAlign: "left" }}>
+          id: {item.id}
+        </span>
+        <span style={{ display: "block", textAlign: "left" }}>
+          name: {item.name}
+        </span>
       </>
-    )
-  }
+    );
+  };
 
   return (
-      
     <div className="App">
-       <header className="App-header">
-        <div style={{ width: '250px' }}>
+      <header className="App-header">
+        <div style={{ width: "250px" }}>
           <ReactSearchAutocomplete
-            items={props.items?props.items:items}
+            items={props.items ? props.items : items}
             onSearch={handleOnSearch}
             onHover={handleOnHover}
             onSelect={handleOnSelect}
@@ -71,7 +75,7 @@ function App(props) {
         </div>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

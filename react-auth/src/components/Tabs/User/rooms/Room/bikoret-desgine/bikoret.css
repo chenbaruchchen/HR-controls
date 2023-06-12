@@ -1,6 +1,6 @@
 .q-list1-open-container {
   width: 100%;
-  border-radius:30px;
+  border-radius: 30px;
 
   display: flex;
   overflow: auto;
@@ -15,8 +15,7 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  background-color: #292F3F;
- 
+  background-color: #292f3f;
 }
 .q-list1-open-head {
   flex: 0 0 auto;
@@ -46,7 +45,7 @@
   flex-direction: row;
   justify-content: center;
   scrollbar-width: hidden;
-  background-color: #373E4E;
+  background-color: #373e4e;
 }
 .q-list1-open-shelon-type {
   flex: 0 0 auto;
@@ -58,7 +57,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text {
   font-size: 30px;
@@ -73,7 +72,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text01 {
   font-size: 30px;
@@ -88,7 +87,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text02 {
   font-size: 30px;
@@ -103,7 +102,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text03 {
   font-size: 30px;
@@ -114,7 +113,7 @@
   display: flex;
   box-shadow: 1px 1px 1px 0px #d4d4d4;
   align-items: center;
-  border-color: #373E4E;
+  border-color: #373e4e;
   border-style: double;
   border-width: 2px;
   border-radius: 13px;
@@ -130,7 +129,7 @@
   border-radius: 23px;
   flex-direction: column;
   justify-content: center;
-  background-color: #373E4E;
+  background-color: #373e4e;
 }
 .q-list1-open-q-text04 {
   font-size: 20px;
@@ -145,7 +144,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text05 {
   font-size: 30px;
@@ -160,7 +159,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text06 {
   font-size: 30px;
@@ -173,7 +172,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-icon {
   width: 40px;
@@ -192,7 +191,7 @@
   border-radius: 23px;
   flex-direction: column;
   justify-content: center;
-  background-color: #373E4E;
+  background-color: #373e4e;
 }
 .q-list1-open-q-text07 {
   font-size: 20px;
@@ -207,7 +206,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text08 {
   font-size: 30px;
@@ -222,7 +221,7 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text09 {
   font-size: 30px;
@@ -252,7 +251,7 @@
   border-radius: 23px;
   flex-direction: column;
   justify-content: center;
-  background-color: #373E4E;
+  background-color: #373e4e;
 }
 .q-list1-open-q-text10 {
   font-size: 20px;
@@ -267,7 +266,7 @@
   border-radius: 23px;
   flex-direction: column;
   justify-content: center;
-  background-color: #373E4E;
+  background-color: #373e4e;
 }
 .q-list1-open-q-text11 {
   font-size: 20px;
@@ -289,12 +288,12 @@
   border-radius: 30px;
   flex-direction: column;
   justify-content: center;
-  background-color: #272A35;
+  background-color: #272a35;
 }
 .q-list1-open-q-text12 {
   font-size: 30px;
 }
-@media(max-width: 479px) {
+@media (max-width: 479px) {
   .q-list1-open-shelon-type {
     height: 60px;
   }
